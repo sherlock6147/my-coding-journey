@@ -1,7 +1,26 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-    <center>
-        <h1>Welcome {{user.is_staff}}</h1>
-    </center>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <section class="header">
+        <ul>
+            <li class="holder">
+                <div class="img-container">
+                    <img src="{% static 'media/welcome-img.png' %}" alt="welcome-img">
+                </div>
+            </li>
+            <li class="holder">
+                <div class="card" id="newsletter_signup">
+                    <h1>I am a passionate developer and tech enthusast.</h1>
+                    <br>
+                    <h3>Signup to my coding journey newsletter below to stay updated with my coding journey.</h3>
+                    <br>
+                    <center>
+                        <a href="{% url 'account_login' %}" id="signup-btn">Signup</a>
+                    </center>
+                </div>
+            </li>
+        </ul>
+    </section>
 {% endblock %}

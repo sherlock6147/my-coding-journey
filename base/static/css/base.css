@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700;800;900&display=swap');
 :root{
     --bg-color : hsl(220,7%,17%);
-    --card-bg-color : hsl(0,0,13);
+    --card-bg-color : hsl(0, 0%, 13%);
     --primary-text-color : hsl(220, 7%, 95%);
     --secondary-text-color : hsl(220, 7%, 80%);
     --secondary-bg-color : hsl(0, 0%, 77%);
