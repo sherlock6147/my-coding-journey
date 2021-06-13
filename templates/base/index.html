@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coding Journey</title>
+</head>
+<body>
+    <center style="font-family: sans-serif;">
+        <h1>My Google Login Project</h1>
+        {% if user.is_authenticated %}
+            <h3>Welcome, {{user.username}} !</h3>
+        {% else %}
+            <h3>Please Login</h3>
+        {% endif %}
+    </center>
+</body>
+</html>
