@@ -17,7 +17,13 @@
                     <h3>Signup to my coding journey newsletter below to stay updated with my coding journey.</h3>
                     <br>
                     <center>
-                        <a href="{% url 'account_login' %}" id="signup-btn">Signup</a>
+                        <li>
+                            <a href="{% url 'account_login' %}" class="signup-btn">Signup</a>
+                        </li>
+                            <br>
+                        <li>
+                            <a title="Google" class="socialaccount_provider google signup-btn" href="/accounts/google/login/?process=login">Signup with Google</a>
+                        </li>
                     </center>
                 </div>
             </li>
