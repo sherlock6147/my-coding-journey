@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/snippets/navigation.css' %}">
+<section class="nav-section">
+    <ul class="links">
+        <li class="link-holder"><a href="{% url 'base:home' %}">Home</a></li>
+        <li class="link-holder"><a href="#">Problems</a></li>
+        <li class="link-holder"><a href="#">Projects</a></li>
+        {% if user.is_staff %}
+            <li class="link-holder"><a href="#">Practice</a></li>
+            <li class="link-holder"><a href="#">Notes</a></li>
+        {% endif %}
+        <li class="link-holder"><a href="#">About</a></li>
+        <li class="link-holder"><a href="#">Contact</a></li>
+        {% if user.is_authenticated %}
+            <li class="link-holder special"><a href="{% url 'account_logout' %}">Logout</a></li>
+        {% else %}
+            <li class="link-holder special"><a href="{% url 'account_login' %}">Login</a></li>
+        {% endif %}
+    </ul>
+</section>

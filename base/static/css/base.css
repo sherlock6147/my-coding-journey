@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700;800;900&display=swap');
+:root{
+    --bg-color : hsl(220,7%,17%);
+    --card-bg-color : hsl(0,0,13);
+    --primary-text-color : hsl(220, 7%, 95%);
+    --secondary-text-color : hsl(220, 7%, 80%);
+    --secondary-bg-color : hsl(0, 0%, 77%);
+    --secondary-light-bg-color : hsl(220, 7%, 95%);
+    --dark-text-color : #000;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-color);
+    color: hsl(220, 7%, 95%);
+    font-family: 'Raleway',sans-serif;
+}
+h1{
+    font-weight: 900;
+}
+h2{
+    font-weight: 700;
+}
+h3{
+    font-weight: 500;
+}
+h4,p{
+    font-weight: 400;
+}
+h5,h6{
+    font-weight: 200;
+}
