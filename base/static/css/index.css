@@ -48,4 +48,8 @@
     .header{
         padding: 10px 10px;
     }
+
+    .holder .card{
+        padding: 15px 5px;
+    }
 }

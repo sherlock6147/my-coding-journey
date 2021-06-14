@@ -69,14 +69,19 @@
     }
     #small.visible{
         display: flex;
+        padding: 10px 0px;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        background: rgba(255, 255, 255, 0.253);
     }
     .links .link-holder{
         margin: 15px 0px;
         justify-content: center;
         align-items: center;
+    }
+    .links .link-holder:hover{
+        font-size: 1.2rem;
     }
     #large{
         display: none;
