@@ -2,29 +2,57 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/index.css' %}">
     <section class="header">
         <ul>
             <li class="holder">
                 <div class="img-container">
-                    <img src="{% static 'media/welcome-img.png' %}" alt="welcome-img">
+                    <img src="{% static 'base/media/welcome-img.png' %}" alt="welcome-img">
                 </div>
             </li>
             <li class="holder">
                 <div class="card" id="newsletter_signup">
-                    <h1>I am a passionate developer and tech enthusast.</h1>
-                    <br>
-                    <h3>Signup to my coding journey newsletter below to stay updated with my coding journey.</h3>
-                    <br>
-                    <center>
-                        <li>
-                            <a href="{% url 'account_signup' %}" class="signup-btn">Signup</a>
-                        </li>
+                    {% if user.is_authenticated %}
+                        {% if user.is_staff %}
+                            <h1>Its better to sweat in practice than bleed in war</h1>
                             <br>
-                        <li>
-                            <a title="Google" class="socialaccount_provider google signup-btn" href="/accounts/google/login/?process=login">Signup with Google</a>
-                        </li>
-                    </center>
+                            <h3>Keep coding, Keep learning!</h3>
+                            <br>
+                            <center>
+                                <li>
+                                    <a href="#" class="signup-btn">Practice</a>
+                                </li>
+                            </center>
+                        {% else %}
+                            <h1>I am a passionate developer and tech enthusast.</h1>
+                            <br>
+                            <h3>See my coding journey.</h3>
+                            <br>
+                            <center>
+                                <li>
+                                    <a href="#" class="signup-btn">Problems</a>
+                                </li>
+                                <br>
+                                <li>
+                                    <a href="#" class="signup-btn">Projects</a>
+                                </li>
+                            </center>
+                        {% endif %}
+                    {% else %}
+                        <h1>I am a passionate developer and tech enthusast.</h1>
+                        <br>
+                        <h3>Signup to my coding journey newsletter below to stay updated with my coding journey.</h3>
+                        <br>
+                        <center>
+                            <li>
+                                <a href="{% url 'account_signup' %}" class="signup-btn">Signup</a>
+                            </li>
+                                <br>
+                            <li>
+                                <a title="Google" class="socialaccount_provider google signup-btn" href="/accounts/google/login/?process=login">Signup with Google</a>
+                            </li>
+                        </center>
+                    {% endif %}
                 </div>
             </li>
         </ul>
