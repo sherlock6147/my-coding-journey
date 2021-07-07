@@ -5,7 +5,7 @@
     <ul class="links" id="large">
         <li class="link-holder"><a href="{% url 'base:home' %}">Home</a></li>
         <li class="link-holder"><a href="#">Problems</a></li>
-        <li class="link-holder"><a href="#">Projects</a></li>
+        <li class="link-holder"><a href="{% url 'development:projects' %}">Projects</a></li>
         {% if user.is_staff %}
             <li class="link-holder"><a href="#">Practice</a></li>
             <li class="link-holder"><a href="#">Notes</a></li>
@@ -28,7 +28,7 @@
     <ul class="links" id="small">
         <li class="link-holder"><a href="{% url 'base:home' %}">Home</a></li>
         <li class="link-holder"><a href="#">Problems</a></li>
-        <li class="link-holder"><a href="#">Projects</a></li>
+        <li class="link-holder"><a href="{% url 'development:projects' %}">Projects</a></li>
         {% if user.is_staff %}
             <li class="link-holder"><a href="#">Practice</a></li>
             <li class="link-holder"><a href="#">Notes</a></li>

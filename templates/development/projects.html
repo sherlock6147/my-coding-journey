@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block title %} Projects {% endblock %}
+{% block content %}
+    <h2>Projects</h2>
+    {% if project_dic_list %}
+        <ul class="project_list">
+            {% for project_dic in project_dic_list %}
+                <li class="project-holder">
+                    <h3 class="project_title">{{project_dic.project.title}}</h3>
+                    <ul class="project_tags">
+                        {% for tag in project_dic.tags %}
+                            <li>{{tag.value}}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'development:project_view' project_dic.project.id %}">Read more</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No projects added! Build some now!</h3>
+    {% endif %}
+{% endblock %}
