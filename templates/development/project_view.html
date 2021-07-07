@@ -1,16 +1,22 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block title %} Projects {% endblock %}
 {% block content %}
-    <h2 id="title">{{project.title}}</h2>
-    <br>
-    <h3>Commenced on {{project.started_on}}</h3>
-    <br>
-    {% if project.link %}
-        <h3><a href="{{project.link}}">{{project.link}}</a></h3>
-    {% endif %}
-    {% if project.deployed_link %}
-        <h3><a href="{{project.deployed_link}}">{{project.deployed_link}}</a></h3>
-    {% endif %}
-
-    <p>{{project.description}}</p>
+    <link rel="stylesheet" href="{% static 'development/css/project_view.css' %}">
+    <main>
+        <h2 id="title">{{project.title}}</h2>
+        <br>
+        <h3>Commenced on {{project.started_on}}</h3>
+        <br>
+        <p>{{project.description}}</p>
+        <br>
+        {% if project.link %}
+            <small><a href="{{project.link}}">Github Repo <i class="fab fa-github"></i></a></small>
+        {% endif %}
+        <br>
+        {% if project.deployed_link %}
+            <small><a href="{{project.deployed_link}}">Link to deployed project <i class="fas fa-rocket"></i></a></small>
+        {% endif %}
+        <br>
+    </main>
 {% endblock %}

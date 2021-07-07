@@ -33,3 +33,11 @@ h4,p{
 h5,h6{
     font-weight: 200;
 }
+main{
+    padding: 10px 120px;
+}
+@media screen and (max-width:800px) {
+    main{
+        padding: 10px 14px;
+    }
+}

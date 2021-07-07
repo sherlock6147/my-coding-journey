@@ -5,18 +5,18 @@ from .models import *
 
 # Create your views here.
 def projects(request):
-    if(request.user.is_staff):
-        project_list = Project.objects.all()
+    if request.user.is_staff:
+        project_list = Project.objects.order_by("started_on")[:3]
     else:
-        project_list = Project.objects.filter(public=True)
-    project_dic_list= []
+        project_list = Project.objects.filter(public=True).order_by("started_on")[:3]
+    project_tags = []
     for project in project_list:
-        dictionary = {}
-        dictionary['project'] = project
-        dictionary['tags'] = ProjectTag.objects.filter(project=project)
-        project_dic_list.append(dictionary)
+        tags = ProjectTag.objects.filter(project=project)
+        for tag in tags:
+            project_tags.append(tag)
     context = {}
-    context['project_dic_list'] = project_dic_list
+    context['project_list'] = project_list
+    context['project_tags'] = project_tags
     print(context)
     return render(request,'development/projects.html',context)
 

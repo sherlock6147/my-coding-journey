@@ -1,5 +1,5 @@
 .header{
-    padding: 10px 80px;
+    padding: 10px 150px;
 }
 .header ul{
     display: flex;
@@ -102,16 +102,24 @@
     border-radius: 100px;
 }
 .card .project_link{
-    margin: 1em auto;
+    margin: 1.5em auto;
+    padding: 0.5em 0.5em;
     width: fit-content;
-    background-color: #F83F33;
+    background-color: #5733f8;
     border-radius: 400px;
 }
 .card .project_link a{
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     width: fit-content;
+    font-size: 16px;
     margin: auto;
     text-decoration: none;
     color: inherit;
+    font-weight: 500;
+}
+
+.read_more{
+    text-decoration: none;
+    color: #4af;
     font-weight: 700;
 }
