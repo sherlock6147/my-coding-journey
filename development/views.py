@@ -9,14 +9,8 @@ def projects(request):
         project_list = Project.objects.order_by("started_on")[:3]
     else:
         project_list = Project.objects.filter(public=True).order_by("started_on")[:3]
-    project_tags = []
-    for project in project_list:
-        tags = ProjectTag.objects.filter(project=project)
-        for tag in tags:
-            project_tags.append(tag)
     context = {}
     context['project_list'] = project_list
-    context['project_tags'] = project_tags
     print(context)
     return render(request,'development/projects.html',context)
 

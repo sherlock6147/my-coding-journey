@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="{% static 'development/css/project_view.css' %}">
     <main>
         <h2 id="title">{{project.title}}</h2>
+        <ul class="tags_holder">
+            {% for tag in project.tags.all %}
+                <li style="background-color: {{tag.bg_color}};">{{tag.value}}</li>
+            {% endfor %}
+        </ul>
         <br>
         <h3>Commenced on {{project.started_on}}</h3>
         <br>

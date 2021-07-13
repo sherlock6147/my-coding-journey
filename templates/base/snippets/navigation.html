@@ -4,14 +4,14 @@
     <h2 id="logo">My Coding Journey</h2>
     <ul class="links" id="large">
         <li class="link-holder"><a href="{% url 'base:home' %}">Home</a></li>
-        <li class="link-holder"><a href="#">Problems</a></li>
+        <!-- <li class="link-holder"><a href="#">Problems</a></li> -->
         <li class="link-holder"><a href="{% url 'development:projects' %}">Projects</a></li>
         {% if user.is_staff %}
-            <li class="link-holder"><a href="#">Practice</a></li>
-            <li class="link-holder"><a href="#">Notes</a></li>
+            <!-- <li class="link-holder"><a href="#">Practice</a></li> -->
+            <!-- <li class="link-holder"><a href="#">Notes</a></li> -->
         {% endif %}
-        <li class="link-holder"><a href="#">About</a></li>
-        <li class="link-holder"><a href="#">Contact</a></li>
+        <li class="link-holder"><a href="{% url 'base:about' %}">About</a></li>
+        <li class="link-holder"><a href="{% url 'base:contact' %}">Contact</a></li>
         {% if user.is_authenticated %}
             <li class="link-holder special"><a href="{% url 'account_logout' %}">Logout</a></li>
         {% else %}
@@ -27,14 +27,14 @@
 <div class="small-nav top">
     <ul class="links" id="small">
         <li class="link-holder"><a href="{% url 'base:home' %}">Home</a></li>
-        <li class="link-holder"><a href="#">Problems</a></li>
+        <!-- <li class="link-holder"><a href="#">Problems</a></li> -->
         <li class="link-holder"><a href="{% url 'development:projects' %}">Projects</a></li>
         {% if user.is_staff %}
-            <li class="link-holder"><a href="#">Practice</a></li>
-            <li class="link-holder"><a href="#">Notes</a></li>
+            <!-- <li class="link-holder"><a href="#">Practice</a></li> -->
+            <!-- <li class="link-holder"><a href="#">Notes</a></li> -->
         {% endif %}
-        <li class="link-holder"><a href="#">About</a></li>
-        <li class="link-holder"><a href="#">Contact</a></li>
+        <li class="link-holder"><a href="{% url 'base:about' %}">About</a></li>
+        <li class="link-holder"><a href="{% url 'base:contact' %}">Contact</a></li>
         {% if user.is_authenticated %}
             <li class="link-holder special"><a href="{% url 'account_logout' %}">Logout</a></li>
         {% else %}

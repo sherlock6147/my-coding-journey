@@ -41,3 +41,6 @@ main{
         padding: 10px 14px;
     }
 }
+a{
+    text-decoration: none;
+}
